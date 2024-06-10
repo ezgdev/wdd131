@@ -1,6 +1,6 @@
 * {
 	margin: 0;
-	padding: 20px 100px 20px 100px;
+	padding: 5px 100px 5px 100px;
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
 }
@@ -170,6 +170,7 @@ footer {
 	color: black;
 	margin-left: 100px;
 	margin-right: 100px;
+	height: 70px;
 }
 
 #footer{

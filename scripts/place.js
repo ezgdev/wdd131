@@ -5,7 +5,6 @@ const copyrightText = `&copy; ${year} Ezequiel Gimenez - Rosario, Argentina.<br>
 const footerElement = document.getElementById('footer');
 footerElement.innerHTML = copyrightText;
 
-
 //windchill function
 const temp = 9; //temperature in °C
 const wind = 13; //windspeed in km/h

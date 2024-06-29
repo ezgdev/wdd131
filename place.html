@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="Place Information">
+    <meta name="author" content="Ezequiel Gimenez">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Rosario, Argentina</h1>
+        <div></div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1024px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+                <img src="images/hero-small.webp" alt="Monument to the Argentine Flag" width="500" height="920">
+            </picture>
+            <div></div>
+        </div>
+
+        <div class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><span class="title">Area:</span>178,69 km²</li>
+                <li><span class="title">Population:</span> 1,348,725</li>
+                <li><span class="title">Lenguages:</span> Spanish</li>
+                <li><span class="title">Currency:</span> Argentine Peso</li>
+                <li><span class="title">Time Zone:</span> UTC -3</li>
+                <li><span class="title">Calling Code:</span> +54 (0341)</li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Weather icon">
+            <ul>
+                <li><span class="title">Temperature:</span>9 °C</li>
+                <li><span class="title">Conditions:</span>Partly Cloudy</li>
+                <li><span class="title">Wind:</span>13 km/h</li>
+                <li><span class="title">Wind Chill: <span id="result"></span></span></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p id="footer"></p>
+    </footer>
+</body>
+
+</html>

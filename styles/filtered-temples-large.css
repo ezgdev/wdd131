@@ -1,0 +1,54 @@
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    
+    header {
+        display: grid;
+        padding: 20px 50px 20px 50px;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+
+    main div {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 20px;
+        padding-bottom: 50px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #1d3557;
+        grid-column: 3/4;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0;
+        color: white;
+    }
+
+    .navigation a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+}

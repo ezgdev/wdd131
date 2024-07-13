@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Ezequiel Gimenez">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="/scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="wf1">
+            <div class="productName">
+                <label>Product name
+                    <select name="chooseProduct" id="product" required>
+                        <option value disabled selected>Select a Product...</option>
+                    </select>
+                </label>
+            </div>
+
+            <label>Overall Rating</label>
+            <div class="stars">
+                <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+            </div>
+
+            <div>
+                <label>Date of Installation</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="features">
+                <label>Which features did you find useful in the product?<br>(Check all that apply)</label>
+                <label><input type="checkbox" id="durability" name="durability" value="yes"> Durability</label>
+                <label><input type="checkbox" id="ease" name="ease" value="yes"> Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="performance" value="yes"> Performance</label>
+                <label><input type="checkbox" id="design" name="design" value="yes"> Design</label>
+            </div>
+
+            <div class="written">
+                <label>Written Review (optional)</label>
+                <textarea name="review" id="review"></textarea>
+            </div>
+
+            <div class="name">
+                <label>Your name (optional)</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div>
+                <input type="submit" value="Post Review" class="button">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p id="footer"></p>
+    </footer>
+</body>
+
+</html>

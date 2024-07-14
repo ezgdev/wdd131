@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #87CEEB;
+    --tertiary-color: #98FB98;
+    --accent1-color: #FFD700;
+    --accent2-color: #FFA07A;
+
+    --heading-font: "Fredoka", sans-serif;
+    --text-font: "Roboto", sans-serif;
+    --paragraph-font: "Lato", sans-serif;
+
+    --nav-background-color: #FFA07A;
+}
+
+
+body {
+    font-family: var(--paragraph-font);
+    padding: 20px;
+    display: grid;
+    background-color: var(--secondary-color);
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: black;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+h3 {
+    font-family: var(--heading-font);
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+h4 {
+    font-family: var(--heading-font);
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--nav-background-color);
+}
+
+p {
+    padding: 25px;
+}
+
+li {
+    font-weight: 400;
+}
+
+.secondaryColor {
+    background-color: var(--secondary-color);
+}
+
+.tertiaryColor {
+    background-color: var(--tertiary-color);
+}
+
+.accent1Color {
+    background-color: var(--accent1-color);
+}
+
+.accent2Color {
+    background-color: var(--accent2-color);
+}
+
+.typography1 {
+    padding: 5px;
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.typography2 {
+    padding: 5px;
+    font-family: var(--text-font);
+    font-size: 20px;
+}
+
+.typography3 {
+    padding: 5px;
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--tertiary-color);
+}

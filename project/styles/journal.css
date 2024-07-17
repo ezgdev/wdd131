@@ -19,7 +19,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    max-width: 250px;
+    max-width: 380px;
     height: auto;
     text-align: center;
     margin: 0 auto;
@@ -47,4 +47,10 @@ main {
 .card-content {
     display: grid;
     row-gap: 10px;
+}
+
+.log-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
 }

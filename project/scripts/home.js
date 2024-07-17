@@ -33,6 +33,5 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 
     //redirect to destination page
     window.location.href = 'journal.html';
-
 });
 

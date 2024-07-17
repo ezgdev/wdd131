@@ -8,7 +8,7 @@
     <meta name="description" content="pediatric journal to keep track of your children's health and growth">
     <meta name="author" content="Ezequiel Gimenez">
     <link rel="stylesheet" href="styles/journal.css">
-    <script src="scripts/journal.js" defer></script>
+    <script src="scripts/home.js" defer></script>
     <script src="scripts/showData.js" defer></script>
 </head>
 
@@ -25,10 +25,9 @@
     </header>
 
     <main>
-
         <div class="card">
             <div class="card-content">
-                <h2>Welcome <span id="name"></span></h2>
+                <h2>Welcome <span id="name"></span> !</h2>
                 <p><span id="weight"></span></p>
                 <p><span id="height"></span></p>
                 <p><span id="age"></span></p>
@@ -37,6 +36,43 @@
             <img src="images/panda.webp" alt="panda image decoration">
         </div>
 
+        <div>
+            <div class="log-container" id="entryForm">
+                <h2>Pediatric Visit Log</h2>
+
+                <label>Date</label>
+                <input type="date" id="date" name="date">
+
+                <label>Age (years)</label>
+                <input type="number" id="years2" name="years" min="0" max="17">
+
+                <label>Age (months)</label>
+                <input type="number" id="months2" name="months" min="0" max="17">
+
+                <label>Weight</label>
+                <input type="number" id="weight2" name="weight" min="0" step="0.1">
+
+                <label>Height</label>
+                <input type="number" id="height2" name="height" min="0">
+
+                <label>Indications</label>
+                <textarea id="indications" name="indications" rows="6" cols="1"></textarea>
+
+                <button type="submit" id="add">Add Entry</button>
+            </div>
+        </div>
+
+        <script src="scripts/journalEntry.js" defer></script>
+
+        <div class="card-entry">
+            <div class="card-content">
+                <p><span id="date"></span></p>
+                <p><span id="age2"></span></p>
+                <p><span id="weight2"></span></p>
+                <p><span id="height2"></span></p>
+                <p><span id="indications"></span></p>
+            </div>
+        </div>
 
     </main>
 

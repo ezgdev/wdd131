@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Journal Home</title>
+    <meta name="description" content="pediatric journal to keep track of your children's health and growth">
+    <meta name="author" content="Ezequiel Gimenez">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/journal.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Your Fun<br>Pediatric<br>Journal</h1>
+        <button id="menu" aria-label="Menu"></button>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="journal.html">Journal Pediatric</a>
+            <a href="vaccination.html">Vaccination Schedule</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <picture>
+                <source srcset="images/banner.webp" media="(min-width: 1024px)">
+                <source srcset="images/banner.webp" media="(min-width: 768px)">
+                <img src="images/banner-mobile.webp" alt="banner">
+            </picture>
+        </div>
+
+        <div class="divForm">
+            <h2>Complete with your child's information</h2>
+            <form method="get" id="myForm">
+                <label for="name">Name *</label>
+                <input type="text" name="name" id="name" placeholder=" Type here" required>
+
+                <label for="name">Gender *</label>
+                <div class="radio">
+                    <label><input type="radio" name="gender" id="boy" required>Boy</label>
+                    <label><input type="radio" name="gender" id="girl" required>Girl</label>
+                </div>
+
+                <label for="name">Weight *</label>
+                <input type="number" name="name" id="weight" placeholder=" Kg" step="0.1" required>
+
+                <label for="name">Height *</label>
+                <input type="number" name="name" id="height" placeholder=" Cm" required>
+
+                <label for="name">Age (years) *</label>
+                <input type="number" name="name" id="years" placeholder=" If less than a year old, enter zero" required>
+
+                <label for="name">Age (months) *</label>
+                <input type="number" name="name" id="months" placeholder=" Months" required>
+
+                <div>
+                    <input type="submit" value="Starts now" class="button">
+                </div>
+            </form>
+        </div>
+
+        <div class="div3">
+            <h2>Why use our pediatric journal?</h2>
+            <div class="section-container">
+                <section>
+                    <h3>Easy tu use</h3>
+                    <p>Intuitive interface for everyone.</p>
+                    <img class="ico" src="images/easy.webp" alt="easy tu use ico">
+                </section>
+
+                <section>
+                    <h3>Vaccination</h3>
+                    <p>Never miss an appointment.</p>
+                    <img class="ico" src="images/reminder.webp" alt="reminder ico">
+                </section>
+
+                <section>
+                    <h3>Medical History</h3>
+                    <p>All information in one place.</p>
+                    <img class="ico" src="images/record.webp" alt="record ico">
+                </section>
+
+                <section>
+                    <h3>Health Tips</h3>
+                    <p>Receive recommendations.</p>
+                    <img class="ico" src="images/tips.webp" alt="tips ico">
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p id="footer"></p>
+    </footer>
+</body>
+
+</html>

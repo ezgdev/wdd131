@@ -82,29 +82,27 @@ nav {
 	display: block;
 }
 
-footer {
+#footer {
 	background-color: var(--accent2-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: 500;
+	font-weight: 600;
     font-size: 15px;
 	color: black;
     padding: 20px;
     text-align: center;
+    font-family: var(--paragraph-font);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .navigation {
-        width: 75%;
+        width: 100%;
     }
 }
 
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
-    * {
-        margin: 2px;
-    }
 
     header {
         display: grid;

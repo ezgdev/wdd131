@@ -16,16 +16,16 @@ const bmi = weightNumber / ((heightNumber / 100) ** 2);
 
 //show data 
 document.getElementById('name').textContent = name;
-document.getElementById('weight').innerHTML = `Weight: ${weightNumber} kg`;
-document.getElementById('height').textContent = `Height: ${heightNumber} cm`;
+document.getElementById('weight').innerHTML = `<strong>Weight:</strong> ${weightNumber} kg`;
+document.getElementById('height').innerHTML = `<strong>Height:</strong> ${heightNumber} cm`;
 
 if (yearsNumber != 0) {
-    document.getElementById('age').textContent = `Age: ${yearsNumber} years and ${months} months`;
+    document.getElementById('age').innerHTML = `<strong>Age:</strong> ${yearsNumber} years and ${months} months`;
 } else {
-    document.getElementById('age').textContent = `Age: ${months} months`
+    document.getElementById('age').innerHTML = `<strong>Age:</strong> ${months} months`
 }
 
-document.getElementById('bmi').textContent = `BMI: ${bmi.toFixed(2)}`;
+document.getElementById('bmi').innerHTML = `<strong>BMI:</strong> ${bmi.toFixed(2)}`;
 
 
 

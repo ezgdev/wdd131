@@ -7,12 +7,103 @@ header {
     background-color: var(--secondary-color);
 }
 
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.filter-cards-container {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+    background-color: var(--tertiary-color);
+}
+
+.filter-cards-container img {
+    width: 50px;
+    height: auto;
+}
+
+.filter-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    column-gap: 20px;
+}
+
+.filter-card h2, .title {
+    text-transform: uppercase;
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.vaccines-container {
+    display: grid;
+    padding: 0px 30px 20px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.vaccine-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--accent1-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 500;
+}
 
 
 #footer {
     background-color: var(--secondary-color);
 }
-
 
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

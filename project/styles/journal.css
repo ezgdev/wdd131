@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('base.css');
 
 header{
@@ -5,7 +8,7 @@ header{
 }
 
 #footer {
-    background-color: var(--tertiary-color);
+    background-color: var(--accent1-color);
 }
 
 main {
@@ -41,13 +44,13 @@ main {
 }
 
 .card p {
-    color: #666;
+    color: #000;
     font-size: 20px;
-    font-family: var(--text-font);
+    font-family: var(--paragraph-font);
 }
 
 .card img {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 
@@ -66,38 +69,58 @@ main {
 
 .log-container h2 {
     font-family: var(--paragraph-font);
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .log-container label {
     display: block;
-    padding-top: 10px;
-    font-family: var(--text-font);
-    font-size: 16px;
+    padding-bottom: 5px;
+    font-family: var(--paragraph-font);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .log-container input {
-    margin-bottom: 2%;
+    margin-bottom: 20px;
     width: 100%;
     height: 44px;
     border-radius: 8px;
     border: none;
 }
 
-textarea {
+#indications {
+    width: 100%;
     border-radius: 8px;
     border: none;
 }
 
 #add {
+    font-size: 14px;
+    font-weight: 600;
     margin-top: 15px;
-    background-color: var(--primary-color);
+    margin-bottom: 0;
+    background-color: var(--secondary-color);
     text-transform: uppercase;
     height: 44px;
     border-radius: 8px;
-    font-family: var(--text-font);
+    font-family: var(--paragraph-font);
     border: none;
+    width: 100%;
+}
+
+input::placeholder {
+    font-family: var(--paragraph-font);
+    padding-left: 5px;
+}
+
+textarea::placeholder {
+    font-family: var(--paragraph-font);
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 #card-container {
@@ -146,12 +169,18 @@ textarea {
 
 .delete-button {
     margin-top: 20px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
     border: none;
-    color: red;
+    color: black;
+    border-radius: 8px;
     font-size: 20px;
     font-family: var(--paragraph-font);
     font-weight: 600;
+}
+
+.delete-button:hover {
+    color: white;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -164,7 +193,7 @@ textarea {
         display: grid;
         grid-template-columns: 1fr;
         padding: 20px;
-        width: 55%;
+        width: 70%;
         margin: 0 auto;
     }
 
@@ -174,6 +203,7 @@ textarea {
         margin: 10px;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        padding-bottom: 20px;
     }
 
 
@@ -194,15 +224,15 @@ textarea {
 
     .card {
         display: grid;
-        width: 100%;
-        height: 60%;
+        width: 90%;
+        height: 50%;
         grid-column: 2/3;
         align-content: space-around;
         justify-items: center;
     }
 
     .card-welcome h2 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .card-welcome p {
@@ -210,7 +240,7 @@ textarea {
     }
 
     .card img {
-        width: 200px;
+        width: 150px;
         height: auto;
     }
     
@@ -219,18 +249,29 @@ textarea {
         padding-right: 50px;
     }
 
+    .log-container h2 {
+        font-size: 22px;
+    }
+
     #card-container {
         grid-column: 1/5;
         width: 100%;
         grid-template-columns: repeat(4, 0.5fr);
         padding-right: 50px;
         padding-left: 50px;
-
     }
+
+    .card-content {
+        max-width: 96%;
+        padding: 15px ;
+        font-size: 20px;
+        row-gap: 5px;
+    }
+    
 
     .banner img {
         display: block;
-        width: 85%;
+        width: 77%;
         height: auto;
     }
 }

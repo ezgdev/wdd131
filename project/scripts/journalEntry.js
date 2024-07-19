@@ -1,4 +1,4 @@
-document.getElementById('add').addEventListener('click', function (event) {
+document.getElementById('entryForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Get entry form data
@@ -84,6 +84,7 @@ if (storedData) {
     // Show container when entry added
     const addButton = document.getElementById('add');
     const cardContainer = document.getElementById('card-container');
+
     addButton.addEventListener('click', () => {
         cardContainer.classList.add('show');
     });

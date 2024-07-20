@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const periodCards = document.querySelectorAll('.filter-cards-container .filter-card');
     const vaccinesContainer = document.querySelector('.vaccines-container');
     const vaccinesHeader = document.querySelector('h3');
-
+    // Array of vaccines objects
     const vaccines = [
         { name: 'Hepatitis B', period: '0', dose: 'Single dose', description: 'Hepatitis B' },
         { name: 'BCG', period: '0', dose: 'Single dose', description: 'Tuberculosis' },
@@ -48,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // filter vaccines by period
     function filterVaccines(period) {
         vaccinesContainer.innerHTML = '';
         const filteredVacunas = vaccines.filter(vaccine => vaccine.period === period);
-
+        // Create vaccines cards
         if (filteredVacunas.length > 0) {
             filteredVacunas.forEach(vaccine => {
                 const vaccineCard = document.createElement('div');

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pediatric Journal Home</title>
-    <meta name="description" content="pediatric journal to keep track of your children's health and growth">
+    <meta name="description"
+        content="Pediatric journal to keep track of your children's health and growth, add and delete entries">
     <meta name="author" content="Ezequiel Gimenez">
     <link rel="stylesheet" href="styles/journal.css">
     <script src="scripts/home.js" defer></script>
@@ -13,10 +14,9 @@
     <script src="scripts/journalEntry.js" defer></script>
 </head>
 
-
 <body>
     <header>
-        <h1>Your Fun<br>Pediatric<br>Journal</h1>
+        <h1><a href="home.html">Your Fun<br>Pediatric<br>Journal</a></h1>
         <button id="menu" aria-label="Menu"></button>
         <nav class="navigation">
             <a href="home.html">Home</a>
@@ -27,7 +27,7 @@
 
     <main>
         <div class="banner">
-            <img src="images/deco.webp" alt="banner for decoration">
+            <img src="images/deco.webp" alt="banner for decoration" loading="lazy">
         </div>
 
         <div class="card">
@@ -38,9 +38,8 @@
                 <p><span id="age"></span></p>
                 <p><span id="bmi"></span></p>
             </div>
-            <img src="images/panda.webp" alt="panda image decoration">
+            <img src="images/panda.webp" alt="panda image decoration" loading="lazy">
         </div>
-
 
         <div class="log-container" id="entryForm">
             <h2>Pediatric Visit Log</h2>
@@ -69,7 +68,6 @@
         </div>
 
         <div id="card-container"></div>
-
     </main>
 
     <footer>

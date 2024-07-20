@@ -57,6 +57,8 @@ input {
     height: 44px;
     border-radius: 8px;
     border: none;
+    font-family: var(--paragraph-font);
+    padding-left: 5px; 
 }
 
 .button {

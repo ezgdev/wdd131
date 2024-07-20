@@ -112,9 +112,20 @@ main {
     width: 100%;
 }
 
+input {
+    font-family: var(--paragraph-font);
+    padding-left: 5px; 
+}
+
 input::placeholder {
     font-family: var(--paragraph-font);
     padding-left: 5px;
+}
+
+textarea {
+    font-family: var(--paragraph-font);
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 textarea::placeholder {

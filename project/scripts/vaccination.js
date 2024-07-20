@@ -4,34 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const vaccinesHeader = document.querySelector('h3');
 
     const vaccines = [
-        { name: 'Hepatitis B', period: '0' },
-        { name: 'BCG', period: '0' },
-        { name: 'Pentavalent', period: '2' },
-        { name: 'Salk/IPV', period: '2' },
-        { name: 'Pneumococcal Conjugate', period: '2' },
-        { name: 'Rotavirus', period: '2' },
-        { name: 'Meningococcus', period: '3' },
-        { name: 'Pentavalent (2nd dose)', period: '4' },
-        { name: 'Salk/IPV (2nd dose)', period: '4' },
-        { name: 'Pneumococcal Conjugate (2nd dose)', period: '4' },
-        { name: 'Rotavirus (2nd dose)', period: '4' },
-        { name: 'Meningococcus (2nd dose)', period: '5' },
-        { name: 'Pentavalent (3rd dose)', period: '6' },
-        { name: 'Salk/IPV (3rd dose)', period: '6' },
-        { name: 'Anti-flu', period: '6' },
-        { name: 'Anti-flu (2nd dose)', period: '6' },
-        { name: 'Triple Viral', period: '12' },
-        { name: 'Hepatitis A', period: '12' },
-        { name: 'Pneumococcal Conjugate (3rd dose)', period: '12' },
-        { name: 'Meningococcus (3rd dose)', period: '15-18' },
-        { name: 'Varicella', period: '15-18' },
-        { name: 'Pentavalent (4th dose)', period: '15-18' },
-        { name: 'Triple Bacterial', period: '5-6' },
-        { name: 'Sabin/OPV', period: '5-6' },
-        { name: 'Triple Viral (2nd dose)', period: '5-6' },
-        { name: 'Human Papillomavirus', period: '11' },
-        { name: 'Human Papillomavirus (2nd dose)', period: '11' },
-        { name: 'Triple Bacterial (2nd dose)', period: '11' },
+        { name: 'Hepatitis B', period: '0', dose: 'Single dose', description: 'Hepatitis B' },
+        { name: 'BCG', period: '0', dose: 'Single dose', description: 'Tuberculosis' },
+        { name: 'Pentavalent', period: '2', dose: '1st dose', description: 'Diphtheria + tetanus + acellular pertussis + hepatitis B + Haemophilus B' },
+        { name: 'Salk/IPV', period: '2', dose: '1st dose', description: 'Poliomyelitis' },
+        { name: 'Pneumococcal Conjugate', period: '2', dose: '1st dose', description: 'Pneumococcal' },
+        { name: 'Rotavirus', period: '2', dose: '1st dose', description: 'Rotavirus' },
+        { name: 'Meningococcus', period: '3', dose: '1st dose', description: 'Meningococcus' },
+        { name: 'Pentavalent', period: '4', dose: '2nd dose', description: 'Diphtheria + tetanus + acellular pertussis + hepatitis B + Haemophilus B' },
+        { name: 'Salk/IPV', period: '4', dose: '2nd dose', description: 'Poliomyelitis' },
+        { name: 'Pneumococcal Conjugate', period: '4', dose: '2nd dose', description: 'Pneumococcal' },
+        { name: 'Rotavirus', period: '4', dose: '2nd dose', description: 'Rotavirus' },
+        { name: 'Meningococcus', period: '5', dose: '2nd dose', description: 'Meningococcus' },
+        { name: 'Pentavalent', period: '6', dose: '3rd dose', description: 'Diphtheria + tetanus + acellular pertussis + hepatitis B + Haemophilus B' },
+        { name: 'Salk/IPV', period: '6', dose: '3rd dose', description: 'Poliomyelitis' },
+        { name: 'Anti-flu', period: '6', dose: '1st dose', description: 'Flu' },
+        { name: 'Anti-flu', period: '6', dose: '2nd dose', description: 'Flu' },
+        { name: 'Triple Viral', period: '12', dose: '1st dose', description: 'Measles + Rubella + Mumps' },
+        { name: 'Hepatitis A', period: '12', dose: 'Single dose', description: 'Hepatitis A' },
+        { name: 'Pneumococcal Conjugate', period: '12', dose: '3rd dose', description: 'Pneumococcal' },
+        { name: 'Meningococcus', period: '15-18', dose: '3rd dose', description: 'Meningococcus' },
+        { name: 'Varicella', period: '15-18', dose: 'Single dose', description: 'Varicella' },
+        { name: 'Pentavalent', period: '15-18', dose: '4th dose', description: 'Diphtheria + tetanus + acellular pertussis + hepatitis B + Haemophilus B' },
+        { name: 'Triple Bacterial', period: '5-6', dose: '1st dose', description: 'Diphtheria + tetanus + acellular pertussis' },
+        { name: 'Sabin/OPV', period: '5-6', dose: 'Single dose', description: 'Poliomyelitis' },
+        { name: 'Triple Viral', period: '5-6', dose: '2nd dose', description: 'Measles + Rubella + Mumps' },
+        { name: 'HPV', period: '11', dose: '1st dose', description: 'Human Papillomavirus' },
+        { name: 'HPV', period: '11', dose: '2nd dose', description: 'Human Papillomavirus' },
+        { name: 'Triple Bacterial', period: '11', dose: '2nd dose', description: 'Diphtheria + tetanus + acellular pertussis' },
     ];
 
     periodCards.forEach(filterCard => {
@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedPeriod = filterCard.getAttribute('data-period');
             filterVaccines(selectedPeriod);
             vaccinesHeader.classList.remove('hidden');
+
+            // Remove the 'active' class from all filter cards
+            periodCards.forEach(c => c.classList.remove('active'));
+
+            // Add the 'active' class to the clicked filter card
+            filterCard.classList.add('active');
         });
     });
 
@@ -50,7 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredVacunas.forEach(vaccine => {
                 const vaccineCard = document.createElement('div');
                 vaccineCard.className = 'vaccine-card';
-                vaccineCard.textContent = vaccine.name;
+
+                let name = document.createElement('h4');
+                name.className = 'vaccine-name';
+                name.textContent = vaccine.name;
+
+                let dose = document.createElement('p');
+                dose.className = 'vaccine-dose';
+                dose.textContent = vaccine.dose;
+
+                let description = document.createElement('p')
+                description.className = 'vaccine-description';
+                description.textContent = vaccine.description;
+
+                vaccineCard.appendChild(name);
+                vaccineCard.appendChild(dose);
+                vaccineCard.appendChild(description);
+
                 vaccinesContainer.appendChild(vaccineCard);
             });
             vaccinesContainer.classList.remove('hidden');
